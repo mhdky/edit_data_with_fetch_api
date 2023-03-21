@@ -7,7 +7,7 @@ editButtons.forEach(editButton => {
         fetch(`/post/${id}/edit`)
         .then(response => response.json())
         .then(post => {
-            document.querySelector('.formPost').action = `/post/${post.id}/edit`;
+            document.querySelector('.formPost').action = `/post/${post.id}`;
             document.getElementById('category').value = post.category_id;
             document.getElementById('title').value = post.title;
             document.getElementById('slug').value = post.slug;
